@@ -38,7 +38,7 @@ class UserRegisterState(rx.State):
     def handle_existing_user(self):
         print("El usuario ya existe. Redirigiendo a la página de login.")
         rx.window_alert("El usuario ya existe. Serás redirigido a la página de inicio de sesión.")
-        return rx.redirect("/login")
+        return rx.redirect("/dashboard_principal")
 
 @rx.page(
     route="/crear_usuarios",
@@ -59,7 +59,7 @@ def register_page() -> rx.Component:
                     rx.heading(
                         "Registro de Usuario",
                         size="2.5em",
-                        color="#FF011D",
+                        color="#910048",
                         text_align="center",
                         width="100%",
                     ),
@@ -176,7 +176,7 @@ def register_page() -> rx.Component:
                         color="white",
                         border_radius="0.75em",
                         box_shadow="0 4px 8px rgba(0, 0, 0, 0.2)",
-                        on_click=UserRegisterState.handle_register,
+                        on_click=UserRegisterState.handle_existing_user,
                     ),
                     spacing="3",
                     width="100%",

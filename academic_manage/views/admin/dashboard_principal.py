@@ -18,7 +18,7 @@ def dashboard_principal_page() -> rx.Component:
             rx.heading(
                 "Panel Principal",
                 size="2.5em",
-                color="#FF011D",
+                color="#910048",
                 text_align="center",
                 margin_bottom="2em",
             ),

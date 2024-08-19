@@ -35,7 +35,7 @@ def create_schedule_page() -> rx.Component:
                 rx.heading(
                     "Crear Horario para Docente",
                     size="2.5em",
-                    color="#FF011D",
+                    color="#910048",
                     text_align="center",
                     width="100%",
                     margin_bottom="1rem",

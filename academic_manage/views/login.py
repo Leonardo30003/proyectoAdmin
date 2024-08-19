@@ -66,7 +66,7 @@ def login_form() -> rx.Component:
                         "Iniciar sesión",
                         font_size="2.5rem",
                         font_weight="bold",
-                        color="#FF011D",
+                        color="#910048",
                     ),
                     direction="column",
                     spacing="5",
