@@ -2,7 +2,7 @@ import reflex as rx
 from sqlmodel import select
 from ..models.user_model import User
 from ..views.dashboard_docente import cursos_page as docente_cursos_page
-from .admin.dashboard_student_actividades import materias_page
+from .admin.dashboard_student_horarios import create_schedule_page
 
 class LoginFormState(rx.State):
     user: dict = {
@@ -45,7 +45,7 @@ class LoginFormState(rx.State):
     def get_redirect_url(self, role):
         """Devuelve la URL de redirección basada en el rol"""
         role_to_url = {
-            "Administrador": "/horario",
+            "Administrador": "/dashboard_principal",
             "Docente": "/dashboard_docente",
         }
         return role_to_url.get(role, "/login")
@@ -106,16 +106,6 @@ def login_form() -> rx.Component:
                     box_shadow="0 2px 10px rgba(0, 23, 55, 0.3)",
                     hover_background_color="#FF011D",
                     active_background_color="#FF011D",
-                ),
-                rx.hstack(
-                    rx.text("¿Nuevo usuario?", color="#000000"),
-                    rx.link(
-                        "Crear una cuenta",
-                        href="/register",
-                        color="#FF011D",
-                        text_decoration="underline",
-                        hover_color="#001737",
-                    ),
                 ),
                 spacing="1.5rem",
             ),

@@ -1,9 +1,9 @@
 import reflex as rx
 from .views.login import login_page
-from .views.register import register_page
 from .views.asignacion_tareas import asignar_tarea_page
-from academic_manage.views.admin.dashboard_student_actividades import materias_page
-from academic_manage.views.admin.dashboard_student_Horarios import horario_page       
+from academic_manage.views.admin.dashboard_student_horarios import create_schedule_page
+from academic_manage.views.admin.dashboard_student_usuarios import register_page  
+from academic_manage.views.admin.dashboard_principal import dashboard_principal_page  
 
 # Homepage
 def index() -> rx.Component:
